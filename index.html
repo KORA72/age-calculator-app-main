@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<!--Boxicon CDN link-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+<link rel="stylesheet" href="styles.css">
+
+
+ 
+</head>
+<body>
+  <div class="card" id="form">
+    <div class="inputSubmit">
+      <label for="day">
+      
+        <input type="number" class="day1" name="day" id="inputDay" min="1" max="31"  placeholder="DD" required/> 
+         <p class="day">Day</p>
+         <div class="input-error">Must be a valid day</div>
+        <p class="validDay"></p>
+        <p class="result"></p>
+        <p class="error__Day"></p>
+      </label>
+
+      <label for="month">
+   
+        <input type="number" class="month1" name="month" id="inputMonth" placeholder="MM" min="1" max="12" required/> 
+            <p class="month">Month</p>
+            <div class="input-error ">Must be a valid month</div>
+        <p class="validMonth"></p>
+        <p class="error__Month"></p>
+      </label>
+
+      <label for="year">
+       
+        <input type="number" class="year1" name="year" id="inputYear" placeholder="YYYY" min="1800"  max="2023" required/>
+         <p class="year">Year</p>
+         <div class="input-error">Must be a valid year</div>
+        <p class="validMonth"></p>
+        <p class="error__Year"></p>
+      </label>
+    </div>
+    
+    <div class="output"> 
+      <hr>
+       <div class="submit"> 
+   
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44" id="completed-task"  ><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>     
+      </div>
+      <h1><span class="outputYears">- -</span><span class="singular__year">years</span></h1>
+      <h1><span class="outputMonth">- -</span><span class="singular__month">months</span></h1>
+      <h1><span class="outputDay">- -</span><span class="singular__day">days</span></h1>
+    </div>
+    
+  </div>
+    
+ 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function preventFormSubmission(){
+      return false;
+    }
+  </script>
+</body>
+</html>

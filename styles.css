@@ -1,0 +1,229 @@
+  @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&family=Goldman&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Poppins:ital,wght@0,100;0,300;0,500;1,400;1,800&display=swap');
+  :root{
+    --body-background:hsl(0, 0%, 94%);
+      --card-background:hsl(0, 0%, 100%);
+      --primary-color:hsl(259, 100%, 65%);
+      --off-black: hsl(0, 0%, 8%);
+      --invalid-color:hsl(0, 100%, 67%);
+  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+body{
+  font-family: "Poppins",sans-serif;
+  background: var(--body-background);
+  transition: .5s ease;
+}
+.card{
+ background: var(--card-background);
+ width: 100%;
+ max-width: 600px;
+ position: relative;
+ left: 40%;
+ margin-top: 10%;
+border-radius: 12px 12px 100px 12px;
+height: 400px;
+padding: 3em;
+}
+ .card .inputSubmit{
+  display: flex;
+  gap:30px ;
+  height: 70px;
+ }
+ .card .inputSubmit p{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+ }
+ .card .inputSubmit input{
+  box-sizing: border-box;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  padding: .5em .2em;
+  border: 1px solid hsl(0, 1%, 44%);
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+ }
+ .card .inputSubmit input:focus{
+  border: 1px solid var(--primary-color);
+ }
+
+
+ /* this code makes the arrows in the number input disappear */
+ .card .inputSubmit input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+ }
+ /* new*************** */
+ .day,
+ .month,
+ .year{
+  position: absolute;
+  top: 5%;
+ }
+ .card .inputSubmit .input-error{
+  color:var(--invalid-color);
+ display: none;
+  margin-top: 10px;
+}
+
+.card .inputSubmit  input:not(:placeholder-shown):invalid{
+  border: 1px solid var(--invalid-color);
+}
+
+.card .inputSubmit input:not(:placeholder-shown):invalid ~  .day,
+.card .inputSubmit input:not(:placeholder-shown):invalid ~  .month,
+.card .inputSubmit input:not(:placeholder-shown):invalid ~  .year{
+  color: var(--invalid-color);
+}
+.card .inputSubmit input:not(:placeholder-shown):invalid ~ .input-error{
+display: block;
+}
+ .card .inputSubmit .error__Day,
+ .card .inputSubmit .error__Month,
+ .card .inputSubmit .error__Year,
+ .card .inputSubmit .result
+ {
+color: var(--invalid-color);
+text-transform: unset;
+font-size: 15px;
+padding-top: 0em;
+letter-spacing: unset;
+white-space: nowrap;
+font-weight: 100;
+font-style: italic;
+
+ }
+ .card .output{
+  display: block;
+  margin-top: 3em;
+ }
+ .card .output h1{
+  font-size: 60px;
+  font-weight: 800i;
+ }
+ .card .output h1>span[class~="outputYears"],
+ .card .output h1>span[class~="outputMonth"],
+ .card .output h1>span[class~="outputDay"]
+ {
+  color: var(--primary-color);
+ }
+ .card .output hr{
+  width: 83%;
+ }
+ .card .output .submit svg {
+  position: absolute;
+  left: 77%;
+  top: 27%;
+  height: 30px;
+  width: 30px;
+padding: 20px;
+text-align: center;
+cursor: pointer;
+background-color:var(--primary-color);
+border-radius: 50%;
+ }
+ .card .output .submit svg:hover{
+  background: var(--off-black);
+ }
+ 
+@media screen and (max-width:992px) {
+  .card{
+    left: 5%;
+}
+  }
+/*  we will delete this one later */
+@media screen and (max-width:376px){
+  .card{
+    padding: 4em 2em;
+    background: var(--card-background);
+    width: 100%;
+    max-width: 345px;
+    position: relative;
+    left: 5%;
+    margin-top: 20%;
+   border-radius: 12px 12px 100px 12px;
+   height: 500px;
+   box-sizing: border-box;
+   
+   }
+   .card .output .submit svg{
+    left: 40%;
+    top: 31%;
+    height: 30px;
+  width: 30px;
+  padding: 2.3em;
+   }
+   .card .inputSubmit input{
+    width: 70px;
+    font-size: 18px;
+    font-weight: 800;
+   }
+   .card .output{
+   margin-top: 30%;
+   }
+   .card .output hr{
+    position: absolute;
+    margin-top: -10%;
+}
+.card .output h1{
+  font-size: 50px;
+  font-weight: 800i;
+ }
+ .card .inputSubmit .error__Day,
+ .card .inputSubmit .error__Month,
+ .card .inputSubmit .error__Year,
+ .card .inputSubmit .result
+ {
+color: var(--invalid-color);
+text-transform: unset;
+font-size: 10px;
+padding-top: 0em;
+letter-spacing: unset;
+white-space: nowrap;
+font-weight: 100;
+font-style: italic;
+position: absolute;
+
+ }
+ .day,
+ .month,
+ .year{
+  position: absolute;
+  top: 8%;
+ }
+ .card .inputSubmit{
+  display: flex;
+  gap:35px ;
+}
+.card .inputSubmit .input-error{
+white-space: nowrap;
+font-size: 11px;
+position: absolute;
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
