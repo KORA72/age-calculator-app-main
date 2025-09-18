@@ -1,10 +1,13 @@
 const button=document.getElementById('completed-task');
 button.addEventListener("click",discharge);
-function discharge(event){
-  let currentYear = 2023;
-  let currentMonth = 10;
-  let currentDay = 22;
+// CREATING DATE 
 
+const today = new Date();
+let currentYear = today.getFullYear();
+ let currentMonth = today.getMonth();
+ let currentDay = today.getDate();
+
+function discharge(event){
 let inputYear=document.getElementById('inputYear').value;
   let inputMonth=document.getElementById('inputMonth').value;
   let inputDay=document.getElementById('inputDay').value;
